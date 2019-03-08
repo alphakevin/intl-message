@@ -73,3 +73,7 @@ Run `app.js` again:
 Hello, World!
 你好，世界！
 ```
+
+## Licence
+
+MIT
