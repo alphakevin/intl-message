@@ -1,0 +1,34 @@
+{
+    "app.js": [
+        {
+            "id": "hello",
+            "pos": "app.js:4:19",
+            "code": "__({ id: 'hello', defaultMessage: 'Hello, World!' }",
+            "ln": 4,
+            "col": 20
+        },
+        {
+            "id": "hello",
+            "pos": "app.js:6:19",
+            "code": "__({ id: 'hello' }",
+            "ln": 6,
+            "col": 20
+        }
+    ],
+    "app.ts": [
+        {
+            "id": "hello",
+            "pos": "app.ts:2:12",
+            "code": "__({ id: 'hello', defaultMessage: 'Hello, World!' }",
+            "ln": 2,
+            "col": 13
+        },
+        {
+            "id": "hello",
+            "pos": "app.ts:4:12",
+            "code": "__({ id: 'hello' }",
+            "ln": 4,
+            "col": 13
+        }
+    ]
+}

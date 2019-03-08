@@ -1,0 +1,20 @@
+{
+    "hello": [
+        {
+            "pos": "app.js:4:19",
+            "code": "__({ id: 'hello', defaultMessage: 'Hello, World!' }"
+        },
+        {
+            "pos": "app.js:6:19",
+            "code": "__({ id: 'hello' }"
+        },
+        {
+            "pos": "app.ts:2:12",
+            "code": "__({ id: 'hello', defaultMessage: 'Hello, World!' }"
+        },
+        {
+            "pos": "app.ts:4:12",
+            "code": "__({ id: 'hello' }"
+        }
+    ]
+}

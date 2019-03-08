@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationDir": "typings",
+    "rootDir": "src",
+    "outDir": "lib",
+    "importHelpers": true,
+    "lib": [
+      "dom",
+      "es7",
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    "sourceMap": true,
+    "allowJs": false,
+    "noEmit": false,
+    "strict": true,
+  },
+  "include": [
+    "src/**/*",
+    "modules.d.ts"
+  ],
+  "exclude": [
+    "examples"
+  ]
+}

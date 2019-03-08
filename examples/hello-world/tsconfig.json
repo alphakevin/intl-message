@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "lib": [
+      "dom",
+      "es7",
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    "sourceMap": true,
+    "allowJs": false,
+    "noEmit": false,
+    "strict": true,
+  },
+}

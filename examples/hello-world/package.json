@@ -1,0 +1,10 @@
+{
+  "name": "intl-message-example",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "intl:extract": "node ../../lib/extract.js"
+  }
+}
