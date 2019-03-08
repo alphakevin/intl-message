@@ -1,6 +1,6 @@
 {
   "name": "intl-message",
-  "version": "1.0.0",
+  "version": "1.0.0-beta1",
   "description": "Simple Intl message translation",
   "main": "lib/index.js",
   "repository": "git@github.com:alphakevin/intl-message.git",
@@ -9,6 +9,11 @@
   "bin": {
     "intl-extract": "lib/extract.js"
   },
+  "keywords": [
+    "intl",
+    "i18n",
+    "translation"
+  ],
   "typings": "./typings/index.d.ts",
   "scripts": {
     "clean": "rm -rf lib/*",

@@ -1,5 +1,7 @@
 # intl-message
 
+[![NPM Version](http://img.shields.io/npm/v/intl-message.svg?style=flat)](https://www.npmjs.org/package/intl-message)
+
 Simple intl message translation
 
 ## Install
@@ -76,4 +78,4 @@ Hello, World!
 
 ## Licence
 
-MIT
+[MIT](LICENSE)
