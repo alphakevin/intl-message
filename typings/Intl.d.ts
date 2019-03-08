@@ -90,7 +90,7 @@ export default class Intl {
      * @param options - Additional options
      * @param options.fallback - Default message when nothing matched
      */
-    formatMessage(desc: MessageDescriptor, values?: MessageVariables, locale?: string, options?: FormatMessageOptions): string;
+    formatMessage(desc: MessageDescriptor | string, values?: MessageVariables, locale?: string, options?: FormatMessageOptions): string;
     /**
      * Format string template
      * @param str - String template

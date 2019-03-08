@@ -62,6 +62,10 @@ const defaultOptions: ExtractingOptions = {
       parser: 'object',
     },
     {
+      regex: /\b__\(\s*'((?:[^'\\]|\\.)*)'\s*\)/g,
+      parser: 'string',
+    },
+    {
       regex: /<FormattedMessage id="([^"]+)"(?:\s*values=\{\\s*{\s*([^\{]+)\s*\}\s*\})?\s*\/>/g,
       parser: 'string',
     },

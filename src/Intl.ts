@@ -225,8 +225,11 @@ export default class Intl {
    * @param options - Additional options
    * @param options.fallback - Default message when nothing matched
    */
-  formatMessage(desc: MessageDescriptor, values?: MessageVariables, locale?: string, options: FormatMessageOptions = {}) {
+  formatMessage(desc: MessageDescriptor | string, values?: MessageVariables, locale?: string, options: FormatMessageOptions = {}) {
     const { fallback } = options;
+    if (_.isString(desc)) {
+      desc = { id: desc };
+    }
     let str = this.getMessageTemplate(desc, locale);
     str = str || desc.defaultMessage || '';
     if (!str) {
