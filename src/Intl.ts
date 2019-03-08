@@ -16,31 +16,27 @@ import {
  */
 export default class Intl {
 
+  /**
+   * @description Default language fallback
+   */
   public defaultLanguage: string;
+  /**
+   * @description Currently used language
+   */
   public language: string;
+  /**
+   * @description Detected navigator language
+   */
   public navigatorLanguage?: string;
+  /**
+   * @description Message dictionaries
+   */
   public locales: LocaleConfig;
 
   constructor(locales: LocaleConfig) {
-    /**
-     * @type {LanguageCode}
-     * @description Default language fallback
-     */
     this.defaultLanguage = 'en';
-    /**
-     * @type {LanguageCode}
-     * @description Currently used language
-     */
     this.language = 'en';
-    /**
-     * @type {LanguageCode}
-     * @description Detected navigator language
-     */
     this.navigatorLanguage = 'en';
-    /**
-     * @type {Object.<LanguageCode,string>}
-     * @description Message dictionaries
-     */
     this.locales = locales;
     this.init();
   }
@@ -86,7 +82,7 @@ export default class Intl {
 
   /**
    * Get language name in its own language
-   * @param {LanguageCode} lang - language code
+   * @param lang - language code
    */
   getLanguageName(lang: string) {
     if (lang === 'auto') {
@@ -176,8 +172,8 @@ export default class Intl {
 
   /**
    * Get message template for specified language
-   * @param {MessageDescriptor} desc - Message descriptor
-   * @param {LanguageCode} locale - language code
+   * @param desc - Message descriptor
+   * @param locale - language code
    */
   getMessageTemplate(desc: MessageDescriptor, locale?: string) {
     if (_.isString(desc)) {
@@ -223,11 +219,11 @@ export default class Intl {
 
   /**
    * Translate message in current locale
-   * @param {MessageDescriptor} desc - Message descriptor
+   * @param desc - Message descriptor
    * @param values - Variable values to replace in message template
-   * @param [locale] - Locale code, e.g. zh-CN
-   * @param [options] - Additional options
-   * @param [options.fallback] - Default message when nothing matched
+   * @param locale - Locale code, e.g. zh-CN
+   * @param options - Additional options
+   * @param options.fallback - Default message when nothing matched
    */
   formatMessage(desc: MessageDescriptor, values?: MessageVariables, locale?: string, options: FormatMessageOptions = {}) {
     const { fallback } = options;
@@ -257,13 +253,13 @@ export default class Intl {
    * @param fallback - Fallback if variables not found
    * @returns Formated string
    * @example
-   * ```javascript
-   * message.replaceMessageVariables('{user} assigned {assignee} a task', {user: 'Jack', assignee: 'Black'})
-   * // => 'Jack assigned Black a task'
-   * // Use another message in template:
-   * message.replaceMessageVariables('User status is {@'user.status.{status}'}', {status: 'ok'})
-   * // => call formatMessage({id: 'user.status.ok'})
-   * ```
+     ```javascript
+     message.replaceMessageVariables('{user} assigned {assignee} a task', {user: 'Jack', assignee: 'Black'})
+     // => 'Jack assigned Black a task'
+     // Use another message in template:
+     message.replaceMessageVariables('User status is {@'user.status.{status}'}', {status: 'ok'})
+     // => call formatMessage({id: 'user.status.ok'})
+     ```
    */
   replaceMessageVariables(str: string, values: MessageVariables = {}, locale?: string, fallback?: string): string {
     const pattern = /{(\w+|@'((?:[\w\.]+|{\w+})+?)')}/g;
@@ -312,7 +308,7 @@ export default class Intl {
    * Parse message and extract variables - reverse function of `replaceMessageVariables`
    * @param desc - Message descriptor
    * @param str - Message string
-   * @param [locale] - Language code
+   * @param locale - Language code
    * @returns Variables
    */
   parseMessageVariables(desc: MessageDescriptor, str: string, locale: string) {
@@ -350,7 +346,7 @@ export default class Intl {
 
   /**
    * Get language dictionary
-   * @param {LanguageCode} locale - Language code
+   * @param locale - Language code
    */
   getMessages(locale?: string) {
     return this.locales[locale || this.language];

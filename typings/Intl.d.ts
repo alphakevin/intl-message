@@ -4,9 +4,21 @@ import { LocaleConfig, LanguageListItem, MessageDescriptor, MessageVariables, Fo
  * Language message detector and translator
  */
 export default class Intl {
+    /**
+     * @description Default language fallback
+     */
     defaultLanguage: string;
+    /**
+     * @description Currently used language
+     */
     language: string;
+    /**
+     * @description Detected navigator language
+     */
     navigatorLanguage?: string;
+    /**
+     * @description Message dictionaries
+     */
     locales: LocaleConfig;
     constructor(locales: LocaleConfig);
     /**
@@ -23,7 +35,7 @@ export default class Intl {
     getStoredLanguage(): string;
     /**
      * Get language name in its own language
-     * @param {LanguageCode} lang - language code
+     * @param lang - language code
      */
     getLanguageName(lang: string): string;
     /**
@@ -48,8 +60,8 @@ export default class Intl {
     detectNavigatorLanguage(): string | undefined;
     /**
      * Get message template for specified language
-     * @param {MessageDescriptor} desc - Message descriptor
-     * @param {LanguageCode} locale - language code
+     * @param desc - Message descriptor
+     * @param locale - language code
      */
     getMessageTemplate(desc: MessageDescriptor, locale?: string): string;
     /**
@@ -72,11 +84,11 @@ export default class Intl {
     formatRelative(date: Date, format?: string): string;
     /**
      * Translate message in current locale
-     * @param {MessageDescriptor} desc - Message descriptor
+     * @param desc - Message descriptor
      * @param values - Variable values to replace in message template
-     * @param [locale] - Locale code, e.g. zh-CN
-     * @param [options] - Additional options
-     * @param [options.fallback] - Default message when nothing matched
+     * @param locale - Locale code, e.g. zh-CN
+     * @param options - Additional options
+     * @param options.fallback - Default message when nothing matched
      */
     formatMessage(desc: MessageDescriptor, values?: MessageVariables, locale?: string, options?: FormatMessageOptions): string;
     /**
@@ -86,26 +98,26 @@ export default class Intl {
      * @param fallback - Fallback if variables not found
      * @returns Formated string
      * @example
-     * ```javascript
-     * message.replaceMessageVariables('{user} assigned {assignee} a task', {user: 'Jack', assignee: 'Black'})
-     * // => 'Jack assigned Black a task'
-     * // Use another message in template:
-     * message.replaceMessageVariables('User status is {@'user.status.{status}'}', {status: 'ok'})
-     * // => call formatMessage({id: 'user.status.ok'})
-     * ```
+       ```javascript
+       message.replaceMessageVariables('{user} assigned {assignee} a task', {user: 'Jack', assignee: 'Black'})
+       // => 'Jack assigned Black a task'
+       // Use another message in template:
+       message.replaceMessageVariables('User status is {@'user.status.{status}'}', {status: 'ok'})
+       // => call formatMessage({id: 'user.status.ok'})
+       ```
      */
     replaceMessageVariables(str: string, values?: MessageVariables, locale?: string, fallback?: string): string;
     /**
      * Parse message and extract variables - reverse function of `replaceMessageVariables`
      * @param desc - Message descriptor
      * @param str - Message string
-     * @param [locale] - Language code
+     * @param locale - Language code
      * @returns Variables
      */
     parseMessageVariables(desc: MessageDescriptor, str: string, locale: string): _.Dictionary<string>;
     /**
      * Get language dictionary
-     * @param {LanguageCode} locale - Language code
+     * @param locale - Language code
      */
     getMessages(locale?: string): import("./types").MessageDictionary;
     /**
