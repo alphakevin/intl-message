@@ -1,6 +1,6 @@
-import * as _ from 'lodash';
-import * as parser from 'accept-language-parser';
-import * as moment from 'moment';
+import _ from 'lodash';
+import parser from 'accept-language-parser';
+import moment from 'moment';
 import IntlMessageFormat from 'intl-messageformat';
 import { isBrowser } from 'browser-or-node';
 import {
@@ -130,7 +130,6 @@ export default class Intl {
 
   /**
    * Get language list with name of native language
-   * @returns {{lang:string,name:string}[]}
    */
   getLanguageList() {
     const list: LanguageListItem[] = [];
@@ -273,7 +272,6 @@ export default class Intl {
       if (fallback) {
         return fallback;
       }
-      return str.replace(pattern, '##');
     }
     const replace: MessageVariables = {};
     const missingKeys = [];
@@ -289,13 +287,12 @@ export default class Intl {
       if (value) {
         replace[wrap] = value;
       } else {
-        replace[wrap] = '##';
         missingKeys.push(wrap);
       }
       found = pattern.exec(str);
     }
     if (missingKeys.length) {
-      console.warn(`message '${original}': values ${missingKeys.join(', ')} missing`);
+      console.warn(`message '${original}': missing variable value(s) ${missingKeys.join(', ')}`);
       if (fallback) {
         console.warn(`using fallback: '${fallback}'`);
         return fallback;

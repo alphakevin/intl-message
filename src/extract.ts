@@ -1,9 +1,9 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as program from 'commander';
-import * as _ from 'lodash';
-import * as glob from 'glob';
-import mkdirp = require('mkdirp');
+import fs from 'fs';
+import path from 'path';
+import program from 'commander';
+import _ from 'lodash';
+import glob from 'glob';
+import mkdirp from 'mkdirp';
 import {
   MessageDescriptor,
   MessageDictionary,
@@ -11,7 +11,6 @@ import {
   MessageMap,
   MessageMapItem,
 } from './types';
-
 
 program
   .version('1.0.0')
@@ -46,7 +45,7 @@ const defaultOptions: ExtractingOptions = {
   defaultLanguage: 'en',
   outputDir: 'locales/.extract',
   extensions: ['js', 'jsx', 'ts', 'tsx'],
-  locales: ['en', 'es', 'fr', 'it', 'ja', 'ko', 'ru', 'zh-cn', 'zh-hk'],
+  locales: ['en', 'es', 'fr', 'it', 'ja', 'ko', 'ru', 'zh-CN', 'zh-HK'],
   fallback: null, // language or null
   sortBy: 'keys', // 'source', 'keys', null
   reserveKeys: true,

@@ -9,7 +9,7 @@ export interface MessageDescriptor {
     defaultMessage?: string;
 }
 export interface MessageVariables {
-    [key: string]: string | number;
+    [key: string]: string | number | undefined;
 }
 export interface LanguageListItem {
     lang: string;

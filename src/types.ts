@@ -12,7 +12,7 @@ export interface MessageDescriptor {
 }
 
 export interface MessageVariables {
-  [key: string]: string | number;
+  [key: string]: string | number | undefined;
 }
 
 export interface LanguageListItem {

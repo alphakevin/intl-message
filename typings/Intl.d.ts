@@ -48,7 +48,9 @@ export default class Intl {
      */
     setLang(lang: string): void;
     getLang(): string;
-    getLocaleNativeNames(): _.Dictionary<string>;
+    getLocaleNativeNames(): {
+        [x: string]: string;
+    };
     /**
      * Get language list with name of native language
      * @returns {{lang:string,name:string}[]}
