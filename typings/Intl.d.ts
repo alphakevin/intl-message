@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import * as _ from 'lodash';
 import { LocaleConfig, LanguageListItem, MessageDescriptor, MessageVariables, FormatMessageOptions } from './types';
 /**
  * Language message detector and translator

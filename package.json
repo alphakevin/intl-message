@@ -1,6 +1,6 @@
 {
   "name": "intl-message",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple Intl message translation",
   "main": "lib/index.js",
   "repository": "git@github.com:alphakevin/intl-message.git",
@@ -37,7 +37,7 @@
     "intl-messageformat": "^7.5.2",
     "lodash": "^4.17.15",
     "mkdirp": "^0.5.1",
-    "moment": "^2.24.0",
+    "moment": "*",
     "tslib": "^1.10.0"
   }
 }
