@@ -8,7 +8,6 @@
     "declarationDir": "typings",
     "rootDir": "src",
     "outDir": "lib",
-    "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "lib": [
       "dom",

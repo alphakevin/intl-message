@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import program from 'commander';
-import _ from 'lodash';
-import glob from 'glob';
-import mkdirp from 'mkdirp';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as program from 'commander';
+import * as _ from 'lodash';
+import * as glob from 'glob';
+import * as mkdirp from 'mkdirp';
 import {
   MessageDescriptor,
   MessageDictionary,

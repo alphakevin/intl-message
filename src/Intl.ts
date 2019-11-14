@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import parser from 'accept-language-parser';
-import moment from 'moment';
+import * as _ from 'lodash';
+import * as parser from 'accept-language-parser';
+import * as moment from 'moment';
 import IntlMessageFormat from 'intl-messageformat';
 import { isBrowser } from 'browser-or-node';
 import {

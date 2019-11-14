@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+import _ from 'lodash';
 import { LocaleConfig, LanguageListItem, MessageDescriptor, MessageVariables, FormatMessageOptions } from './types';
 /**
  * Language message detector and translator
@@ -53,7 +53,6 @@ export default class Intl {
     };
     /**
      * Get language list with name of native language
-     * @returns {{lang:string,name:string}[]}
      */
     getLanguageList(): LanguageListItem[];
     /**
